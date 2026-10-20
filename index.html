@@ -1,0 +1,201 @@
+<!doctype html>
+<html lang="fr">
+  <head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <meta
+      name="description"
+      content="DataLab Pro — plateforme premium d'analyse de données, Excel avancé, sources de référence et intelligence native."
+    />
+    <title>DataLab Pro | IA Native & Analyst Workspace</title>
+    <link rel="stylesheet" href="styles.css" />
+  </head>
+  <body>
+    <div class="app-shell">
+      <aside class="sidebar" aria-label="Navigation principale">
+        <div class="brand-wrap">
+          <div class="logo">D</div>
+          <div>
+            <strong>DataLab Pro</strong>
+            <small>v5.0 · Premium</small>
+          </div>
+        </div>
+
+        <div class="nav-label">Tableau</div>
+        <nav class="nav">
+          <button class="nav-item active" data-target="overview">Accueil</button>
+          <button class="nav-item" data-target="intelligence">IA native</button>
+          <button class="nav-item" data-target="excel">Excel expert</button>
+          <button class="nav-item" data-target="dashboard">Dashboard</button>
+          <button class="nav-item" data-target="sources">Sources</button>
+          <button class="nav-item" data-target="playbooks">Playbooks</button>
+        </nav>
+
+        <div class="nav-label">Mise à jour</div>
+        <div class="mini-panel">
+          <div class="mini-stat">
+            <span>Flux</span>
+            <strong id="feed-count">08</strong>
+          </div>
+          <div class="mini-stat">
+            <span>Sources</span>
+            <strong id="source-count">06</strong>
+          </div>
+        </div>
+
+        <div class="side-foot">
+          Moteur d’analyst intelligence alimenté par des référentiels Excel, BI, SQL, Python et docs de référence.
+        </div>
+      </aside>
+
+      <main class="main-panel">
+        <header class="topbar">
+          <label class="search-box" aria-label="Recherche globale">
+            <svg viewBox="0 0 24 24" aria-hidden="true"><path d="M10.5 3a7.5 7.5 0 015.95 12.55l4.4 4.4 1.4-1.4-4.4-4.4A7.5 7.5 0 1110.5 3zm0 2a5.5 5.5 0 100 11 5.5 5.5 0 000-11z"/></svg>
+            <input id="global-search" type="search" placeholder="Rechercher un module, une formule ou une source..." />
+          </label>
+          <span class="pill">Premium + IA</span>
+          <button id="theme-toggle" class="btn icon" type="button" aria-label="Changer le thème">☀️</button>
+          <button id="refresh-feed" class="btn primary" type="button">Actualiser le flux</button>
+        </header>
+
+        <div class="content">
+          <section id="overview" class="section">
+            <div class="hero">
+              <span class="eyebrow">Zero to Hero · Data Analyst Masterclass</span>
+              <h1>
+                Un espace d’analyse <span class="hl">premium</span>, évolutif et piloté par l’intelligence de données.
+              </h1>
+              <p>
+                DataLab Pro centralise les bonnes pratiques Excel, les scripts SQL/Python, les composants BI et la veille de référence pour accélérer les décisions avec un cadre IA native, orienté analyste.
+              </p>
+              <div class="hero-pills">
+                <span>Excel expert</span>
+                <span>Power BI</span>
+                <span>SQL</span>
+                <span>Python</span>
+                <span>IA native</span>
+              </div>
+              <div class="hero-actions">
+                <button class="btn ghost" type="button" data-target="excel">Voir les modules</button>
+                <button class="btn ghost" type="button" data-target="sources">Consulter les sources</button>
+              </div>
+            </div>
+
+            <div class="kpis" id="kpi-grid"></div>
+          </section>
+
+          <section id="intelligence" class="section">
+            <div class="section-head">
+              <div>
+                <h2>IA native & moteur de connaissance</h2>
+                <p class="sub">Système de veille, synthèse et recommandations structuré autour de références fiables.</p>
+              </div>
+            </div>
+
+            <div class="grid two-col">
+              <article class="card intelligence-card">
+                <div class="cat">Pilotage</div>
+                <h3>Brief stratégique généré</h3>
+                <p class="desc">Le moteur synthétise les sources internes et les priorités d’analyse pour formuler des recommandations de décision.</p>
+                <div class="callout good">Focus actuel : densité des ventes, délais de livraison, qualité des données et impact des dépenses marketing.</div>
+                <button id="generate-brief" class="btn primary" type="button">Générer le brief</button>
+                <div id="brief-output" class="brief-output" aria-live="polite"></div>
+              </article>
+
+              <article class="card">
+                <div class="cat">Veille</div>
+                <h3>Sources d’actualisation</h3>
+                <p class="desc">Le programme reçoit ses mises à jour selon plusieurs référentiels reconnus : Excel, Power BI, SQL, Python et données de benchmark analyst.</p>
+                <ul class="list-check">
+                  <li>Microsoft Learn / Excel & Power BI</li>
+                  <li>Google Data Analytics</li>
+                  <li>SQL Server & docs de référence</li>
+                  <li>Python / pandas / NumPy</li>
+                </ul>
+              </article>
+            </div>
+          </section>
+
+          <section id="excel" class="section">
+            <div class="section-head">
+              <div>
+                <h2>Modules Excel avancés</h2>
+                <p class="sub">Formules, cas pratiques, validations, automatisations et dashboard analytique.</p>
+              </div>
+            </div>
+
+            <div class="tabs" role="tablist" aria-label="Accès aux modules Excel">
+              <button class="tab active" type="button" role="tab" aria-selected="true" data-tab="formules">Formules</button>
+              <button class="tab" type="button" role="tab" aria-selected="false" data-tab="exercices">Exercices</button>
+              <button class="tab" type="button" role="tab" aria-selected="false" data-tab="cas-pratiques">Cas pratiques</button>
+            </div>
+
+            <div id="excel-panels" class="panel-stack"></div>
+          </section>
+
+          <section id="dashboard" class="section">
+            <div class="section-head">
+              <div>
+                <h2>Dashboard d’analyste</h2>
+                <p class="sub">Vue d’ensemble avec KPI, score de performance et synthèse exploitable.</p>
+              </div>
+            </div>
+
+            <div class="dashboard-grid">
+              <article class="card dashboard-panel large">
+                <div class="cat">Performance</div>
+                <h3>Suivi de la performance commerciale</h3>
+                <div class="chart-bars" id="chart-bars"></div>
+              </article>
+
+              <article class="card dashboard-panel">
+                <div class="cat">Score</div>
+                <h3>Qualité des données</h3>
+                <div class="score-ring">
+                  <div class="ring-core">94%</div>
+                </div>
+                <p class="desc">Taux de complétude, cohérence des sources, date de mise à jour et répartitions des anomalies.</p>
+              </article>
+
+              <article class="card dashboard-panel">
+                <div class="cat">Plan d'action</div>
+                <h3>Actions immédiates</h3>
+                <ul class="list-check compact">
+                  <li>Nettoyer les doublons clients</li>
+                  <li>Valider le score de marge</li>
+                  <li>Automatiser les alertes KPI</li>
+                  <li>Mettre à jour les référentiels</li>
+                </ul>
+              </article>
+            </div>
+          </section>
+
+          <section id="sources" class="section">
+            <div class="section-head">
+              <div>
+                <h2>Sources de référence & mises à jour</h2>
+                <p class="sub">Veille multidirectionnelle par sources, ansibles, documents et référentiels reconnus.</p>
+              </div>
+            </div>
+
+            <div id="source-filters" class="chips" aria-label="Filtres de sources"></div>
+            <div id="source-cards" class="source-grid"></div>
+          </section>
+
+          <section id="playbooks" class="section">
+            <div class="section-head">
+              <div>
+                <h2>Playbooks & cas d’usage</h2>
+                <p class="sub">Méthodes de travail, architecture d’analyse et modèles de production.</p>
+              </div>
+            </div>
+            <div id="playbook-grid" class="module-grid"></div>
+          </section>
+        </div>
+      </main>
+    </div>
+
+    <script src="app.js"></script>
+  </body>
+</html>
