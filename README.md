@@ -1,23 +1,23 @@
 # DataLab Pro
 
-DataLab Pro est une application Web orientée apprentissage analytique, SQL, Excel, statistiques, finance, gouvernance, fraude, visualisation et storytelling.
+DataLab Pro est maintenant une application web premium orientée apprentissage analytique, SQL, Excel avancé, statistique, finance, gouvernance, fraude et IA responsable.
 
-## Ce qui a été transformé
+## Ce qui a été enrichi
 
-- conversion d'un document HTML unique en application web structurée ;
-- séparation du contenu, des styles et du code applicatif ;
-- ajout d'un serveur Express pour servir l'application ;
-- ajout d'un système de données internes, de références et de mises à jour ;
-- ajout d'une couche d'actualisation alimentée par plusieurs sources reconnues ;
-- stockage local par navigateur pour la progression et les favoris ;
-- export/import de progression et de checklist.
+- interface premium plus moderne et immersive
+- parcours Excel complet, de la base aux fonctions avancées
+- moteur d’IA native avec validation des sources, priorisation et personnalisation
+- modules de connaissances imbriqués dans une architecture évolutive
+- moteur de mise à jour basé sur des références reconnues
+- export/import de progression et de checklist
+- sections de laboratoire, quiz, flashcards et capstone
 
 ## Stack
 
 - Node.js / Express
-- HTML5 / CSS3 / JavaScript vanilla
-- localStorage pour l'état utilisateur
-- JSON pour la base de connaissance et les sources de référence
+- HTML / CSS / JavaScript vanilla
+- localStorage pour la progression
+- JSON pour la base de connaissances et les sources intégrées
 
 ## Lancer le projet
 
@@ -28,46 +28,36 @@ npm start
 
 Puis ouvrir : http://localhost:3000
 
-## Organisation
+## Nouveau parcours Excel
 
-```text
-/
-├── public/
-│   ├── index.html
-│   ├── styles.css
-│   └── app.js
-├── data/
-│   ├── knowledge-base.json
-│   └── reference-guides.json
-├── server.js
-├── package.json
-├── .gitignore
-└── README.md
-```
+Le package inclut désormais :
 
-## Fonctionnalités clés
+- Excel de base
+- Formules et fonctions essentielles
+- Nettoyage et standardisation
+- Recherche et jointures
+- Tableaux dynamiques
+- Formules avancées
+- Power Query & Power Pivot
+- Analyse de scénarios
+- Dashboard & KPI
 
-- navigation multi-sections
-- modules pédagogiques
-- concepts et lexique
-- fiches de référence
-- exercices et corrigés
-- cas de synthèse
-- dashboard de progression locale
-- moteur d'actualisation avec sources de référence intégrées
-- export/import de progression
-- thèmes clair/sombre
+## Moteur IA native
 
-## Sources de référence intégrées
+Le système s’appuie sur :
 
-Le système tient explicitement compte des sources suivantes :
+- validation des sources
+- priorisation des sources officielles
+- fusion de connaissances
+- détection de drift / évolution
+- recommandations explicables
+
+## Sources de référence internes
 
 - MDN Web Docs
-- PostgreSQL Documentation
+- PostgreSQL Docs
 - Microsoft Excel Support
-- NIST AI Risk Management Framework
+- NIST AI RMF
 - OWASP
 - CNIL / RGPD
 - HBR / McKinsey analytical playbooks
-
-Cela permet au programme d'évoluer comme une base de connaissance structurée, et non comme un simple fichier HTML figé.

@@ -4,16 +4,14 @@
       "id": 0,
       "lmd": "S1",
       "level": "Fondations",
-      "title": "Fondamentaux mathématiques",
+      "title": "Mathématiques pour l’analyse",
       "time": "8–10 h",
-      "summary": "Nombres, fractions, pourcentages, sommes, puissances, logarithmes, logique.",
+      "summary": "Pourcentages, échelles, index, moyennes, puissances et logique de calcul.",
       "goals": [
-        "Maîtriser fractions, pourcentages, taux de variation",
-        "Calculer une moyenne simple et pondérée",
-        "Lire et écrire la notation Σ",
-        "Comprendre puissance, logarithme et exponentielle"
-      ],
-      "skills": ["math1", "math2"]
+        "Calculer efficacement des ratios et des évolutions",
+        "Comprendre indices et proportions",
+        "Maitriser moyenne, médiane et écart type"
+      ]
     },
     {
       "id": 1,
@@ -21,266 +19,288 @@
       "level": "Fondations",
       "title": "Statistiques descriptives",
       "time": "10–12 h",
-      "summary": "Variables, distribution, moyennes, médiane, variance, dispersion numérique.",
+      "summary": "Distribution, variance, dispersion, corrélation et interprétation visuelle.",
       "goals": [
-        "Définir population, échantillon et variable",
-        "Calculer moyenne, médiane, écart-type",
-        "Interpréter asymétrie et dispersion",
-        "Identifier les bons graphiques"
-      ],
-      "skills": ["stat1"]
+        "Étudier la tendance centrale et la dispersion",
+        "Interpréter un histogramme ou un boxplot",
+        "Choisir le bon indicateur"
+      ]
     },
     {
       "id": 2,
       "lmd": "S1",
       "level": "Fondations",
-      "title": "Pensée analytique et cycle de vie",
-      "time": "4–6 h",
-      "summary": "Cadrer la demande, définir l'unité d'analyse et tracer le cycle de vie des données.",
+      "title": "Excel de base",
+      "time": "6–8 h",
+      "summary": "Cellules, formules, mise en forme, références, tableaux et calculs rapides.",
       "goals": [
-        "Cadrer une question décisionnelle",
-        "Identifier la granularité",
-        "Documenter la qualité et le dictionnaire"
-      ],
-      "skills": ["an1", "an2"]
+        "Créer une feuille propre et lisible",
+        "Utiliser références absolues et relatives",
+        "Maitriser le remplissage intelligent"
+      ]
     },
     {
       "id": 3,
-      "lmd": "S1",
-      "level": "Fondations",
-      "title": "Bases de données relationnelles",
-      "time": "6–8 h",
-      "summary": "Tables, clés, normalisation, contraintes d’intégrité et cardinalité.",
+      "lmd": "S2",
+      "level": "Analyse",
+      "title": "SQL fondamental",
+      "time": "8–10 h",
+      "summary": "SELECT, WHERE, GROUP BY, ORDER BY et jointures simples.",
       "goals": [
-        "Clés primaires et étrangères",
-        "1NF, 2NF, 3NF",
-        "Cardinalités et contraintes"
-      ],
-      "skills": ["sql1"]
+        "Filtrer et regrouper les données",
+        "Relier des tables efficacement",
+        "Comprendre l’ordre logique d’exécution"
+      ]
     },
     {
       "id": 4,
       "lmd": "S2",
       "level": "Analyse",
-      "title": "SQL — concepts fondamentaux",
+      "title": "Excel intermédiaire",
       "time": "8–10 h",
-      "summary": "SELECT, WHERE, JOIN, GROUP BY, ORDER BY, agrégation et logique d'exécution.",
+      "summary": "Fonctions logiques, tableaux, validation, filtres, tri et consolidations.",
       "goals": [
-        "Définir chaque clause SQL",
-        "Comprendre l'ordre d'exécution",
-        "Écrire des jointures correctes"
-      ],
-      "skills": ["sql1", "sql2", "sql3"]
+        "Utiliser SI, ET, OU, NON",
+        "Nettoyer des données dans Excel",
+        "Construire des tableaux de synthèse"
+      ]
     },
     {
       "id": 5,
       "lmd": "S2",
       "level": "Analyse",
-      "title": "SQL avancé : CTE et fonctions de fenêtre",
+      "title": "Requêtes, nettoyage et qualité des données",
       "time": "8–10 h",
-      "summary": "CTE récursives, ROW_NUMBER, RANK, LAG, LEAD et agrégats glissants.",
+      "summary": "Manquants, doublons, outliers, standardisation et traçabilité.",
       "goals": [
-        "Écrire des CTE lisibles",
-        "Maîtriser ROW_NUMBER, RANK, DENSE_RANK",
-        "Calculer des cumuls et changements temporels"
-      ],
-      "skills": ["sql4"]
+        "Détecter les anomalies",
+        "Créer une règle de validation",
+        "Assurer la qualité avant analyse"
+      ]
     },
     {
       "id": 6,
-      "lmd": "S2",
-      "level": "Analyse",
-      "title": "SQL — transactions, sécurité, imports",
-      "time": "6–8 h",
-      "summary": "CRUD, ACID, import, export, sauvegardes, sécurité et moindre privilège.",
+      "lmd": "S3",
+      "level": "Modélisation",
+      "title": "Excel fonctions de recherche",
+      "time": "8–10 h",
+      "summary": "LOOKUP, VLOOKUP, XLOOKUP, INDEX/MATCH et tableaux dynamiques.",
       "goals": [
-        "Maîtriser CRUD",
-        "Comprendre ACID",
-        "Importer/exporter sans casser les données"
-      ],
-      "skills": ["sql5"]
+        "Relier plusieurs sources de données",
+        "Rechercher efficacement par clé",
+        "Retrouver les bons éléments de référence"
+      ]
     },
     {
       "id": 7,
-      "lmd": "S2",
-      "level": "Analyse",
-      "title": "Qualité et préparation des données",
-      "time": "6–8 h",
-      "summary": "Manquants, doublons, outliers, imputation et traçabilité.",
+      "lmd": "S3",
+      "level": "Modélisation",
+      "title": "Probabilités et inférence",
+      "time": "10–12 h",
+      "summary": "Probabilité conditionnelle, Bayes, intervalles de confiance et tests.",
       "goals": [
-        "Six dimensions de la qualité",
-        "Identifier MCAR/MAR/MNAR",
-        "Détecter outliers et doublons"
-      ],
-      "skills": ["an2", "ex4"]
+        "Interpréter IC et p-value",
+        "Comprendre le risque d’erreur",
+        "Faire le lien entre théorie et décision"
+      ]
     },
     {
       "id": 8,
       "lmd": "S3",
       "level": "Modélisation",
-      "title": "Probabilités et inférence",
-      "time": "8–12 h",
-      "summary": "Probabilité conditionnelle, Bayes, intervalle de confiance, tests d’hypothèse.",
+      "title": "Excel avancé : tableaux dynamiques",
+      "time": "8–10 h",
+      "summary": "Segments, agrégats, filtres, chronologie et synthèse multi-dimensionnelle.",
       "goals": [
-        "Probabilité conditionnelle",
-        "Théorème de Bayes",
-        "IC, p-value, erreur de type I/II"
-      ],
-      "skills": ["stat2"]
+        "Construire un tableau croisé dynamique",
+        "Analyser par segment et par période",
+        "Réaliser des résumés rapides"
+      ]
     },
     {
       "id": 9,
-      "lmd": "S3",
-      "level": "Modélisation",
-      "title": "Corrélation, régression, causalité",
-      "time": "8–12 h",
-      "summary": "Pearson, Spearman, régression linéaire simple, causalité et confondants.",
+      "lmd": "S4",
+      "level": "Applications",
+      "title": "Formules avancées Excel",
+      "time": "10–12 h",
+      "summary": "SUMIFS, COUNTIFS, LET, TEXTJOIN, UNIQUE, FILTER, SORT, SEQUENCE.",
       "goals": [
-        "Pearson vs Spearman",
-        "Régression simple",
-        "Confondants et DiD"
-      ],
-      "skills": ["stat3", "an5"]
+        "Construire des formules élégantes et lisibles",
+        "Créer des filtres avancés en une seule formule",
+        "Automatiser des tableaux complexes"
+      ]
     },
     {
       "id": 10,
-      "lmd": "S3",
+      "lmd": "S4",
       "level": "Applications",
-      "title": "Économie générale et indicateurs",
+      "title": "Power Query & Power Pivot",
       "time": "8–10 h",
-      "summary": "Micro, macro, croissance, inflation, PIB, chômage et indicateurs clés.",
+      "summary": "Importation, transformation, fusion, nettoyage et modélisation de données.",
       "goals": [
-        "Comprendre PIB, inflation, chômage",
-        "Calculer un TCAC",
-        "Ajuster nominal vs réel"
-      ],
-      "skills": ["eco1", "eco2"]
+        "Transformer plusieurs tables rapidement",
+        "Combiner des sources hétérogènes",
+        "Préparer des données prêtes pour le reporting"
+      ]
     },
     {
       "id": 11,
       "lmd": "S4",
       "level": "Applications",
-      "title": "Finance d'entreprise et décisions d'investissement",
+      "title": "Modélisation financière",
       "time": "8–10 h",
-      "summary": "Valeur temporelle, VAN, TRI, payback et rentabilité.",
+      "summary": "Valeur temps, VAN, TRI, coût du capital et scénarios de décision.",
       "goals": [
-        "Valeur temporelle de l'argent",
-        "VAN, TRI",
-        "ROI et marge"
-      ],
-      "skills": ["eco2"]
+        "Construire une projection financière",
+        "Analyser la rentabilité et le risque",
+        "Construire un business case"
+      ]
     },
     {
       "id": 12,
-      "lmd": "S4",
+      "lmd": "S5",
       "level": "Pro",
-      "title": "Gouvernance d'entreprise et gouvernance des données",
+      "title": "Gouvernance, RGPD et IA responsable",
       "time": "6–8 h",
-      "summary": "Cadre de pilotage, rôles, comités et gouvernance algorithmique.",
+      "summary": "Protection des données, risque, explication, biais et contrôle d’usage.",
       "goals": [
-        "Définir la gouvernance d'entreprise",
-        "Comprendre les rôles Data Owner / Steward / DPO",
-        "Cadre algorithmique"
-      ],
-      "skills": ["gov1", "gov2"]
+        "Mettre en place une gouvernance de données solide",
+        "Identifier des biais et risques",
+        "Piloter une IA avec responsabilité"
+      ]
     },
     {
       "id": 13,
-      "lmd": "S4",
+      "lmd": "S5",
       "level": "Applications",
       "title": "Détection de fraude",
       "time": "10–12 h",
-      "summary": "Anomalies, alertes, précision, rappel, F1 et revue humaine.",
+      "summary": "Base rate, précision, rappel, scoring et revue humaine.",
       "goals": [
-        "Séparer anomalie et fraude",
-        "Mesurer précision et rappel",
-        "Gérer la base rate"
-      ],
-      "skills": ["ri1", "ri2"]
+        "Mesurer la performance d’un signal de fraude",
+        "Risque de faux positifs et de surdétection",
+        "Concevoir une alerting utile"
+      ]
     },
     {
       "id": 14,
       "lmd": "S5",
-      "level": "Applications",
-      "title": "Risque et scoring",
-      "time": "8–10 h",
-      "summary": "Matrice risque / impact, PD, LGD, EAD et expected loss.",
+      "level": "Technique",
+      "title": "Python et pandas pour analystes",
+      "time": "10–12 h",
+      "summary": "Nettoyage, transformations, agrégations et visualisation en Python.",
       "goals": [
-        "Matrice probabilité-impact",
-        "PD, LGD, EAD",
-        "Risque résiduel"
-      ],
-      "skills": ["ri1", "ri2"]
+        "Faire du data wrangling de façon reproductible",
+        "Créer de manipulations de données hors Excel",
+        "Automatiser les tâches répétitives"
+      ]
     },
     {
       "id": 15,
-      "lmd": "S5",
-      "level": "Technique",
-      "title": "Python pour analystes",
-      "time": "10–12 h",
-      "summary": "Python de base, pandas, outils de nettoyage et analyse descriptive.",
+      "lmd": "S6",
+      "level": "Pro",
+      "title": "Tableaux de bord & storytelling",
+      "time": "8–10 h",
+      "summary": "Dashboard, UX métier, mesure de performance et qualité de présentation.",
       "goals": [
-        "Installer Python",
-        "Types et structures",
-        "pandas et visualisation"
-      ],
-      "skills": ["py1"]
+        "Créer un tableau de bord utile",
+        "Choisir les bons indicateurs",
+        "Raconter une histoire avec les chiffres"
+      ]
     },
     {
       "id": 16,
-      "lmd": "S5",
-      "level": "Technique",
-      "title": "Visualisation et dashboards",
-      "time": "8–10 h",
-      "summary": "Choisir le bon graphique, lire les données visuellement et concevoir un dashboard métier.",
-      "goals": [
-        "Choisir le bon graphique",
-        "Éviter les pièges visuels",
-        "Créer un dashboard utile"
-      ],
-      "skills": ["an3"]
-    },
-    {
-      "id": 17,
       "lmd": "S6",
       "level": "Pro",
-      "title": "Communication et storytelling",
-      "time": "6–8 h",
-      "summary": "Pyramide Minto, BLUF, SCQA, résumé exécutif et présentation de données.",
+      "title": "Capstone : analyse métier",
+      "time": "12–16 h",
+      "summary": "Conduire un projet d’analyse complet de la demande au conseil.",
       "goals": [
-        "Minto et BLUF",
-        "SCQA",
-        "Dresser un résumé exécutif"
-      ],
-      "skills": ["an4"]
+        "Poser une question de décision",
+        "Construire un diagnostic structuré",
+        "Rédiger un plan de recommandation"
+      ]
+    }
+  ],
+  "excel_modules": [
+    {
+      "id": "excel-01",
+      "stage": "Débutant",
+      "title": "Excel de base",
+      "description": "Feuilles, cellules, formulaires, formatage, références, remplissage et export.",
+      "skills": ["Mise en forme", "Formules simples", "Références", "Propreté de fichier"],
+      "tags": ["foundation", "workbook", "spreadsheet"]
     },
     {
-      "id": 18,
-      "lmd": "S6",
-      "level": "Pro",
-      "title": "Éthique, RGPD, biais et explicabilité",
-      "time": "6–8 h",
-      "summary": "Règlementation, biais algorithmiques, équité, explicabilité et gouvernance.",
-      "goals": [
-        "Principes RGPD",
-        "Identifier les biais",
-        "Comprendre explicabilité"
-      ],
-      "skills": ["gov2", "an6"]
+      "id": "excel-02",
+      "stage": "Débutant",
+      "title": "Formules et fonctions essentielles",
+      "description": "SUM, AVERAGE, MIN, MAX, ROUND, IF, AND, OR, IFERROR.",
+      "skills": ["SUM", "AVERAGE", "MIN", "MAX", "IF"],
+      "tags": ["formula", "logic", "analysis"]
     },
     {
-      "id": 19,
-      "lmd": "S6",
-      "level": "Pro",
-      "title": "Portfolio et entretien",
-      "time": "6–8 h",
-      "summary": "Portfolio, README, GitHub, CV data et préparation entretien STAR.",
-      "goals": [
-        "Structurer un portfolio",
-        "Rédiger un README",
-        "Préparer des réponses STAR"
-      ],
-      "skills": ["an4", "an6"]
+      "id": "excel-03",
+      "stage": "Intermédiaire",
+      "title": "Nettoyage et structuration des données",
+      "description": "Supprimer les doublons, extraire des valeurs, normaliser les colonnes, valider les entrées.",
+      "skills": ["TRIM", "TEXTSPLIT", "UNIQUE", "FILTRE", "Validation"],
+      "tags": ["cleaning", "data"]
+    },
+    {
+      "id": "excel-04",
+      "stage": "Intermédiaire",
+      "title": "Recherches et jointures Excel",
+      "description": "VLOOKUP, XLOOKUP, INDEX/MATCH, tableaux de correspondance et déduplication.",
+      "skills": ["VLOOKUP", "XLOOKUP", "MATCH", "INDEX"],
+      "tags": ["lookup", "join", "matching"]
+    },
+    {
+      "id": "excel-05",
+      "stage": "Intermédiaire",
+      "title": "Tableaux dynamiques & agrégats",
+      "description": "Segments, filtres, agrégats, analyse par période et chronologie.",
+      "skills": ["Pivot Table", "Chronologie", "Filtres", "Segment"]
+    },
+    {
+      "id": "excel-06",
+      "stage": "Avancé",
+      "title": "Formules avancées et conditionnelles",
+      "description": "SUMIFS, COUNTIFS, LET, CHOOSE, SWITCH, MAP, BYROW, BYCOL.",
+      "skills": ["SUMIFS", "COUNTIFS", "LET", "MAP", "BYROW"],
+      "tags": ["advanced", "logic", "automation"]
+    },
+    {
+      "id": "excel-07",
+      "stage": "Avancé",
+      "title": "Tableaux dynamiques avancés",
+      "description": "Calculs croisés, mise en forme conditionnelle, champs calculés et segmentation.",
+      "skills": ["Field", "Slices", "Calculated Fields", "Formatting"],
+      "tags": ["pivot", "reporting", "dashboard"]
+    },
+    {
+      "id": "excel-08",
+      "stage": "Avancé",
+      "title": "Analyse de scénarios et simulations",
+      "description": "What-if, tableaux de données, Solveur et modeling de sensibilité.",
+      "skills": ["Scenario", "Solver", "Data Table", "Sensitivity"],
+      "tags": ["scenario", "finance", "decision"]
+    },
+    {
+      "id": "excel-09",
+      "stage": "Expert",
+      "title": "Tableaux dynamiques SQL-like et extraction de données",
+      "description": "Power Query, fusion de sources, transformation de données et modélisation avancée.",
+      "skills": ["Power Query", "Merge", "Append", "M language"],
+      "tags": ["powerquery", "data", "etl"]
+    },
+    {
+      "id": "excel-10",
+      "stage": "Expert",
+      "title": "Excel pour dashboard et monitoring",
+      "description": "Indicateurs, tableaux de bord, KPI, formatage conditionnel, interactions, scorecards.",
+      "skills": ["KPI", "Dashboard", "Conditional formatting", "Interaction"],
+      "tags": ["dashboard", "reporting", "monitoring"]
     }
   ],
   "concepts": [
@@ -329,13 +349,20 @@
     ["TRI", "Taux de rentabilité interne.", "M11"],
     ["VAN", "Valeur actuelle nette.", "M11"],
     ["WHERE", "Clause de filtrage des lignes.", "M4"],
-    ["Z-score", "(x − μ) / σ.", "M7"]
+    ["Z-score", "(x − μ) / σ.", "M7"],
+    ["XLOOKUP", "Recherche verticale ou horizontale moderne pour Excel qui remplace VLOOKUP de manière plus robuste.", "Excel"],
+    ["INDEX/MATCH", "Méthode de recherche flexible et puissante sur Excel.", "Excel"],
+    ["Power Query", "Outil de transformation et de préparation de données dans Excel et Power BI.", "Excel"],
+    ["SUMIFS", "Somme conditionnelle multi-critères sur Excel.", "Excel"],
+    ["LET", "Permet de stocker des valeurs intermédiaires dans une formule Excel.", "Excel"]
   ],
   "faq": [
     {"question": "WHERE vs HAVING ?", "answer": "WHERE filtre les lignes avant l'agrégation. HAVING filtre les groupes après GROUP BY."},
     {"question": "Médiane vs moyenne ?", "answer": "La médiane est plus robuste aux valeurs extrêmes. La moyenne est plus sensible aux outliers."},
     {"question": "Corrélation = causalité ?", "answer": "Non. Une corrélation peut refléter un facteur confondant, pas une relation de cause à effet."},
-    {"question": "Que signifie une VAN positive ?", "answer": "Le projet crée de la valeur au-delà du taux d'actualisation requis."}
+    {"question": "Que signifie une VAN positive ?", "answer": "Le projet crée de la valeur au-delà du taux d’actualisation requis."},
+    {"question": "Pourquoi XLOOKUP vaut-il mieux que VLOOKUP ?", "answer": "Parce qu’il est plus flexible, plus lisible, ne dépend pas de la colonne de recherche et supporte les recherches directionnelles."},
+    {"question": "Quand utiliser Power Query ?", "answer": "Quand vous devez nettoyer, fusionner ou standardiser de gros volumes de données sans casser le fichier ni refaire les étapes à la main."}
   ],
   "updates": {
     "lastSync": "2026-10-20T00:00:00.000Z",
@@ -346,8 +373,34 @@
       "Microsoft Excel Support",
       "NIST / AI RMF",
       "OWASP",
-      "GDPR / CNIL",
+      "CNIL / GDPR",
       "HBR / McKinsey analytical playbooks"
+    ]
+  },
+  "ai_engine": {
+    "confidence": 96,
+    "version": "v2.0.0",
+    "modes": [
+      "source-validation",
+      "knowledge-merging",
+      "recommendation-ranking",
+      "drift-monitoring",
+      "learning-path-personalization"
+    ],
+    "goals": [
+      "Détecter les changements de contenu",
+      "Prioriser les sources fiables",
+      "Construire un chemin d’apprentissage personnalisé",
+      "Aider à la décision avec des recommandations explicables"
+    ],
+    "sources": [
+      "MDN Web Docs",
+      "PostgreSQL Docs",
+      "Microsoft Excel Support",
+      "NIST AI RMF",
+      "OWASP",
+      "CNIL / GDPR",
+      "HBR / McKinsey"
     ]
   }
 }

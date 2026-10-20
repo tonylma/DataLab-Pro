@@ -37,8 +37,8 @@ app.get('/api/update-status', (req, res) => {
   const knowledge = readJson(knowledgePath);
   const guides = readJson(guidesPath);
   res.json({
-    appVersion: '1.0.0',
-    updateWindow: 'daily',
+    appVersion: '2.0.0',
+    updateWindow: 'manual + scheduled',
     lastSync: knowledge.updates?.lastSync || 'n/a',
     status: knowledge.updates?.status || 'ready',
     sources: knowledge.updates?.sources || [],
@@ -47,21 +47,39 @@ app.get('/api/update-status', (req, res) => {
   });
 });
 
+app.get('/api/ai-snapshot', (req, res) => {
+  const knowledge = readJson(knowledgePath);
+  res.json({
+    version: knowledge.ai_engine?.version || 'v2.0.0',
+    confidence: knowledge.ai_engine?.confidence || 96,
+    goals: knowledge.ai_engine?.goals || [],
+    modes: knowledge.ai_engine?.modes || [],
+    sources: knowledge.ai_engine?.sources || []
+  });
+});
+
+app.get('/api/excel-pathway', (req, res) => {
+  const knowledge = readJson(knowledgePath);
+  res.json({
+    modules: knowledge.excel_modules || [],
+    roadmap: [
+      'Excel de base',
+      'Formules et logique',
+      'Nettoyage de données',
+      'Recherche & jointures',
+      'Tableaux dynamiques',
+      'Formules avancées',
+      'Power Query & modélisation',
+      'Dashboard & monitoring'
+    ]
+  });
+});
+
 app.post('/api/sync', (req, res) => {
   const mode = req.body?.mode || 'manual-refresh';
   const knowledge = readJson(knowledgePath);
   const guides = readJson(guidesPath);
-
   const now = new Date().toISOString();
-  const result = {
-    mode,
-    syncedAt: now,
-    status: 'updated',
-    lastSync: now,
-    sources: knowledge.updates?.sources || [],
-    guideCount: (guides.guides || []).length,
-    rules: guides.rail?.refreshPolicy || []
-  };
 
   knowledge.updates = {
     ...knowledge.updates,
@@ -70,7 +88,15 @@ app.post('/api/sync', (req, res) => {
   };
 
   fs.writeFileSync(knowledgePath, JSON.stringify(knowledge, null, 2));
-  res.json(result);
+
+  res.json({
+    mode,
+    syncedAt: now,
+    status: 'updated',
+    sourceCount: (knowledge.updates?.sources || []).length,
+    guideCount: (guides.guides || []).length,
+    rules: guides.rail?.refreshPolicy || []
+  });
 });
 
 app.get('*', (req, res) => {
