@@ -1,291 +1,201 @@
-<!DOCTYPE html>
+<!doctype html>
 <html lang="fr">
   <head>
-    <meta charset="UTF-8" />
-    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <title>DataLab Pro v5.0</title>
-    <link rel="stylesheet" href="/styles.css" />
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <meta
+      name="description"
+      content="DataLab Pro — plateforme premium d'analyse de données, Excel avancé, sources de référence et intelligence native."
+    />
+    <title>DataLab Pro | IA Native & Analyst Workspace</title>
+    <link rel="stylesheet" href="styles.css" />
   </head>
   <body>
     <div class="app-shell">
-      <aside class="sidebar" id="sidebar">
-        <div class="brand">
-          <div class="logo">DΣ</div>
+      <aside class="sidebar" aria-label="Navigation principale">
+        <div class="brand-wrap">
+          <div class="logo">D</div>
           <div>
-            <strong>DataLab Pro v5.0</strong>
-            <small>Zero to Hero · IA native</small>
+            <strong>DataLab Pro</strong>
+            <small>v5.0 · Premium</small>
           </div>
         </div>
 
-        <div class="navlabel">Programme</div>
-        <button class="navitem active" data-nav="accueil">⌂ <span>Accueil</span></button>
-        <button class="navitem" data-nav="parcours">◈ <span>Parcours LMD</span></button>
-        <button class="navitem" data-nav="curriculum">▦ <span>Modules</span></button>
-        <button class="navitem" data-nav="excel">✦ <span>Excel</span></button>
-        <button class="navitem" data-nav="ai-native">◎ <span>IA native</span></button>
-        <button class="navitem" data-nav="concepts">∑ <span>Concepts</span></button>
-        <button class="navitem" data-nav="lexique">A <span>Lexique</span></button>
-        <button class="navitem" data-nav="fiches">⚡ <span>Fiches</span></button>
-        <button class="navitem" data-nav="exercices">✎ <span>Exercices</span></button>
-        <button class="navitem" data-nav="atelier">⚗ <span>Laboratoire</span></button>
-        <button class="navitem" data-nav="evaluation">✓ <span>Évaluation</span></button>
-        <button class="navitem" data-nav="projet">◇ <span>Capstone</span></button>
-        <button class="navitem" data-nav="progression">◴ <span>Progression</span></button>
+        <div class="nav-label">Tableau</div>
+        <nav class="nav">
+          <button class="nav-item active" data-target="overview">Accueil</button>
+          <button class="nav-item" data-target="intelligence">IA native</button>
+          <button class="nav-item" data-target="excel">Excel expert</button>
+          <button class="nav-item" data-target="dashboard">Dashboard</button>
+          <button class="nav-item" data-target="sources">Sources</button>
+          <button class="nav-item" data-target="playbooks">Playbooks</button>
+        </nav>
 
-        <div class="sidefoot">
-          <div>v5.0 · IA-native knowledge engine</div>
-          <div id="sessionTimer">Session : 0 min</div>
-          <div id="streakInfo">Streak : 0 jour</div>
+        <div class="nav-label">Mise à jour</div>
+        <div class="mini-panel">
+          <div class="mini-stat">
+            <span>Flux</span>
+            <strong id="feed-count">08</strong>
+          </div>
+          <div class="mini-stat">
+            <span>Sources</span>
+            <strong id="source-count">06</strong>
+          </div>
+        </div>
+
+        <div class="side-foot">
+          Moteur d’analyst intelligence alimenté par des référentiels Excel, BI, SQL, Python et docs de référence.
         </div>
       </aside>
 
-      <main class="main">
+      <main class="main-panel">
         <header class="topbar">
-          <button class="btn mobilemenu" id="mobileMenuBtn">☰</button>
-          <label class="search">
-            <span>⌕</span>
-            <input id="globalSearch" type="search" placeholder="Rechercher partout…" />
+          <label class="search-box" aria-label="Recherche globale">
+            <svg viewBox="0 0 24 24" aria-hidden="true"><path d="M10.5 3a7.5 7.5 0 015.95 12.55l4.4 4.4 1.4-1.4-4.4-4.4A7.5 7.5 0 1110.5 3zm0 2a5.5 5.5 0 100 11 5.5 5.5 0 000-11z"/></svg>
+            <input id="global-search" type="search" placeholder="Rechercher un module, une formule ou une source..." />
           </label>
-          <button class="btn icon" id="themeBtn" title="Thème">🌓</button>
-          <button class="btn icon" id="helpBtn" title="Aide">?</button>
-          <span class="pill">v5.0</span>
-          <button class="btn" id="pdfBtn">PDF</button>
+          <span class="pill">Premium + IA</span>
+          <button id="theme-toggle" class="btn icon" type="button" aria-label="Changer le thème">☀️</button>
+          <button id="refresh-feed" class="btn primary" type="button">Actualiser le flux</button>
         </header>
 
         <div class="content">
-          <section class="section" id="accueil">
+          <section id="overview" class="section">
             <div class="hero">
-              <span class="eyebrow">Zero to Hero · IA native · Excel + SQL + Data</span>
-              <h1>De zéro à <span class="hl">analyste premium</span>, avec un système de connaissances vivant.</h1>
+              <span class="eyebrow">Zero to Hero · Data Analyst Masterclass</span>
+              <h1>
+                Un espace d’analyse <span class="hl">premium</span>, évolutif et piloté par l’intelligence de données.
+              </h1>
               <p>
-                Ce programme couvre les mathématiques, la statistique, le SQL, Excel de base à avancé, la gouvernance,
-                la fraude, la finance et le storytelling, alimenté par des références fiables et un moteur d’évolution intelligent.
+                DataLab Pro centralise les bonnes pratiques Excel, les scripts SQL/Python, les composants BI et la veille de référence pour accélérer les décisions avec un cadre IA native, orienté analyste.
               </p>
-              <div class="pills">
-                <span>Excel avancé</span>
-                <span>Power Query</span>
-                <span>Tableaux dynamiques</span>
+              <div class="hero-pills">
+                <span>Excel expert</span>
+                <span>Power BI</span>
                 <span>SQL</span>
                 <span>Python</span>
-                <span>Finance</span>
-                <span>Fraude</span>
-                <span>IA responsable</span>
+                <span>IA native</span>
               </div>
-              <div class="actions">
-                <button class="btn primary" data-nav="parcours">Voir le parcours</button>
-                <button class="btn ghost" data-nav="curriculum">Commencer</button>
-                <button class="btn ghost" data-nav="excel">Excel</button>
+              <div class="hero-actions">
+                <button class="btn ghost" type="button" data-target="excel">Voir les modules</button>
+                <button class="btn ghost" type="button" data-target="sources">Consulter les sources</button>
               </div>
             </div>
 
-            <div class="kpis">
-              <div class="kpi">
-                <div class="lbl">Modules</div>
-                <div class="val"><span id="kpiModules">0</span>/16</div>
-                <div class="progress"><span id="kpiModulesBar"></span></div>
+            <div class="kpis" id="kpi-grid"></div>
+          </section>
+
+          <section id="intelligence" class="section">
+            <div class="section-head">
+              <div>
+                <h2>IA native & moteur de connaissance</h2>
+                <p class="sub">Système de veille, synthèse et recommandations structuré autour de références fiables.</p>
               </div>
-              <div class="kpi">
-                <div class="lbl">Excel parcours</div>
-                <div class="val"><span id="kpiExcel">0</span>/10</div>
-                <div class="progress"><span id="kpiExcelBar"></span></div>
-              </div>
-              <div class="kpi">
-                <div class="lbl">Concepts</div>
-                <div class="val"><span id="kpiConcepts">0</span>/70</div>
-                <div class="progress"><span id="kpiConceptsBar"></span></div>
-              </div>
-              <div class="kpi">
-                <div class="lbl">Capstone</div>
-                <div class="val"><span id="kpiProject">0</span>/12</div>
-                <div class="progress"><span id="kpiProjectBar"></span></div>
-              </div>
+            </div>
+
+            <div class="grid two-col">
+              <article class="card intelligence-card">
+                <div class="cat">Pilotage</div>
+                <h3>Brief stratégique généré</h3>
+                <p class="desc">Le moteur synthétise les sources internes et les priorités d’analyse pour formuler des recommandations de décision.</p>
+                <div class="callout good">Focus actuel : densité des ventes, délais de livraison, qualité des données et impact des dépenses marketing.</div>
+                <button id="generate-brief" class="btn primary" type="button">Générer le brief</button>
+                <div id="brief-output" class="brief-output" aria-live="polite"></div>
+              </article>
+
+              <article class="card">
+                <div class="cat">Veille</div>
+                <h3>Sources d’actualisation</h3>
+                <p class="desc">Le programme reçoit ses mises à jour selon plusieurs référentiels reconnus : Excel, Power BI, SQL, Python et données de benchmark analyst.</p>
+                <ul class="list-check">
+                  <li>Microsoft Learn / Excel & Power BI</li>
+                  <li>Google Data Analytics</li>
+                  <li>SQL Server & docs de référence</li>
+                  <li>Python / pandas / NumPy</li>
+                </ul>
+              </article>
             </div>
           </section>
 
-          <section class="section hidden" id="parcours">
-            <h2>Parcours LMD — Licence + Master</h2>
-            <p class="sub">Transition fluide entre fondations, modélisation, applications, gouvernance et capstone.</p>
-            <div id="parcoursContainer"></div>
-          </section>
-
-          <section class="section hidden" id="curriculum">
-            <h2>Modules complets</h2>
-            <div class="modulegrid" id="moduleGrid"></div>
-            <div id="lessonPanel"></div>
-          </section>
-
-          <section class="section hidden" id="excel">
-            <h2>Excel : de la base aux fonctions avancées</h2>
-            <p class="sub">Un parcours structuré, progressif, de la feuille de calcul au dashboard intelligent.</p>
-            <div id="excelPath"></div>
-          </section>
-
-          <section class="section hidden" id="ai-native">
-            <h2>Moteur IA native</h2>
-            <p class="sub">Le programme évolue selon des règles de validation, source fiable, suivi de drift et personnalisation.</p>
-            <div id="aiEnginePanel"></div>
-          </section>
-
-          <section class="section hidden" id="concepts">
-            <h2>Bibliothèque de concepts</h2>
-            <div class="chips" id="conceptChips"></div>
-            <div id="conceptList"></div>
-          </section>
-
-          <section class="section hidden" id="lexique">
-            <h2>Lexique A-Z</h2>
-            <div class="searchbox">
-              <input id="lexSearch" type="search" placeholder="Filtrer le lexique…" />
-            </div>
-            <table class="lex-table" id="lexTable">
-              <tbody></tbody>
-            </table>
-          </section>
-
-          <section class="section hidden" id="fiches">
-            <h2>Aide-mémoire</h2>
-            <div class="tabs" id="ficheTabs">
-              <button class="tab" data-tab="sql" aria-selected="true">SQL</button>
-              <button class="tab" data-tab="excel" aria-selected="false">Excel</button>
-              <button class="tab" data-tab="equiv" aria-selected="false">Équivalences</button>
-              <button class="tab" data-tab="stats" aria-selected="false">Stats</button>
-              <button class="tab" data-tab="econ" aria-selected="false">Économie</button>
-              <button class="tab" data-tab="risk" aria-selected="false">Fraude</button>
-            </div>
-            <div class="chips" id="chips"></div>
-            <div id="out"></div>
-          </section>
-
-          <section class="section hidden" id="exercices">
-            <h2>Exercices progressifs</h2>
-            <div class="ex-level"><span class="badge">1</span><h3>Découverte</h3></div>
-            <div id="ex-level-1"></div>
-            <div class="ex-level"><span class="badge">2</span><h3>Consolidation</h3></div>
-            <div id="ex-level-2"></div>
-            <div class="ex-level"><span class="badge">3</span><h3>Maîtrise</h3></div>
-            <div id="ex-level-3"></div>
-            <div class="ex-level"><span class="badge">4</span><h3>Excellence</h3></div>
-            <div id="ex-level-4"></div>
-          </section>
-
-          <section class="section hidden" id="atelier">
-            <h2>Laboratoire interactif</h2>
-            <div class="lab">
-              <div class="row">
-                <input id="csvFile" type="file" accept=".csv,text/csv" />
-                <select id="delimiter">
-                  <option value="auto">Auto</option>
-                  <option value="," >Virgule</option>
-                  <option value=";">Point-virgule</option>
-                  <option value="\t">Tabulation</option>
-                </select>
-                <select id="encoding">
-                  <option value="utf-8">UTF-8</option>
-                  <option value="windows-1252">Windows-1252</option>
-                </select>
-              </div>
-              <div class="row">
-                <button class="btn primary" onclick="window.loadCsv()">Analyser</button>
-                <button class="btn" onclick="window.loadSample()">Exemple</button>
-                <button class="btn" onclick="window.clearData()">Effacer</button>
-              </div>
-              <div id="dataSummary" class="summary"></div>
-              <div class="csv-preview"><table id="previewTable"></table></div>
-              <div class="row row-actions">
-                <button class="btn" onclick="window.exportCsv()">Export CSV</button>
-                <button class="btn" onclick="window.exportJson()">Export JSON</button>
-                <button class="btn" onclick="window.exportSql()">SQL INSERT</button>
-              </div>
-              <p id="exportStatus" class="muted"></p>
-            </div>
-
-            <div class="grid">
-              <div class="calc">
-                <h3>Risque</h3>
-                <div class="row"><label for="riskProb">Probabilité (%)</label><input id="riskProb" type="number" value="10" /></div>
-                <div class="row"><label for="riskImpact">Impact (FCFA)</label><input id="riskImpact" type="number" value="1000000" /></div>
-                <div class="row"><label for="riskControl">Contrôles (%)</label><input id="riskControl" type="number" value="40" /></div>
-                <button class="btn primary" onclick="window.calcRisk()">Calculer</button>
-                <div id="riskResult" class="result hidden"></div>
-              </div>
-
-              <div class="calc">
-                <h3>Finance</h3>
-                <div class="row"><label>Init</label><input id="finInit" type="number" value="100000" /></div>
-                <div class="row"><label>Final</label><input id="finFinal" type="number" value="112000" /></div>
-                <div class="row"><label>Inflation (%)</label><input id="finInflation" type="number" value="5" /></div>
-                <div class="row"><label>Flux annuel</label><input id="finCF" type="number" value="30000" /></div>
-                <div class="row"><label>Invest</label><input id="finInvest" type="number" value="100000" /></div>
-                <div class="row"><label>Actualisation (%)</label><input id="finDiscount" type="number" value="10" /></div>
-                <button class="btn primary" onclick="window.calcFinance()">Calculer</button>
-                <div id="finResult" class="result hidden"></div>
+          <section id="excel" class="section">
+            <div class="section-head">
+              <div>
+                <h2>Modules Excel avancés</h2>
+                <p class="sub">Formules, cas pratiques, validations, automatisations et dashboard analytique.</p>
               </div>
             </div>
+
+            <div class="tabs" role="tablist" aria-label="Accès aux modules Excel">
+              <button class="tab active" type="button" role="tab" aria-selected="true" data-tab="formules">Formules</button>
+              <button class="tab" type="button" role="tab" aria-selected="false" data-tab="exercices">Exercices</button>
+              <button class="tab" type="button" role="tab" aria-selected="false" data-tab="cas-pratiques">Cas pratiques</button>
+            </div>
+
+            <div id="excel-panels" class="panel-stack"></div>
           </section>
 
-          <section class="section hidden" id="evaluation">
-            <h2>Évaluation</h2>
-            <button class="btn" onclick="window.renderRandomQuiz()">🎲 Quiz aléatoire</button>
-            <form id="quizForm" class="quiz-form"></form>
-            <div class="quiz-actions">
-              <button class="btn primary" onclick="window.gradeQuiz()">Corriger</button>
-              <button class="btn" onclick="window.resetQuiz()">Recommencer</button>
+          <section id="dashboard" class="section">
+            <div class="section-head">
+              <div>
+                <h2>Dashboard d’analyste</h2>
+                <p class="sub">Vue d’ensemble avec KPI, score de performance et synthèse exploitable.</p>
+              </div>
             </div>
-            <div id="quizResult" class="result hidden"></div>
-            <h3 class="flashcard-title">Flashcards</h3>
-            <div class="grid" id="flashcards"></div>
+
+            <div class="dashboard-grid">
+              <article class="card dashboard-panel large">
+                <div class="cat">Performance</div>
+                <h3>Suivi de la performance commerciale</h3>
+                <div class="chart-bars" id="chart-bars"></div>
+              </article>
+
+              <article class="card dashboard-panel">
+                <div class="cat">Score</div>
+                <h3>Qualité des données</h3>
+                <div class="score-ring">
+                  <div class="ring-core">94%</div>
+                </div>
+                <p class="desc">Taux de complétude, cohérence des sources, date de mise à jour et répartitions des anomalies.</p>
+              </article>
+
+              <article class="card dashboard-panel">
+                <div class="cat">Plan d'action</div>
+                <h3>Actions immédiates</h3>
+                <ul class="list-check compact">
+                  <li>Nettoyer les doublons clients</li>
+                  <li>Valider le score de marge</li>
+                  <li>Automatiser les alertes KPI</li>
+                  <li>Mettre à jour les référentiels</li>
+                </ul>
+              </article>
+            </div>
           </section>
 
-          <section class="section hidden" id="projet">
-            <h2>Projet capstone</h2>
-            <div class="grid" id="projectCards"></div>
-            <div class="checklist" id="projectChecklist"></div>
-            <div class="inline-actions">
-              <button class="btn" onclick="window.exportChecklist()">Export checklist CSV</button>
-              <button class="btn primary" onclick="window.exportProgress()">Export progression JSON</button>
-              <button class="btn" onclick="window.importProgress()">Importer</button>
+          <section id="sources" class="section">
+            <div class="section-head">
+              <div>
+                <h2>Sources de référence & mises à jour</h2>
+                <p class="sub">Veille multidirectionnelle par sources, ansibles, documents et référentiels reconnus.</p>
+              </div>
             </div>
+
+            <div id="source-filters" class="chips" aria-label="Filtres de sources"></div>
+            <div id="source-cards" class="source-grid"></div>
           </section>
 
-          <section class="section hidden" id="progression">
-            <h2>Ma progression</h2>
-            <div class="checklist" id="skillChecklist"></div>
-            <div class="inline-actions">
-              <button class="btn" onclick="window.resetAllProgress()">Réinitialiser</button>
-              <button class="btn primary" onclick="window.exportProgress()">Exporter</button>
-              <button class="btn" onclick="window.importProgress()">Importer</button>
+          <section id="playbooks" class="section">
+            <div class="section-head">
+              <div>
+                <h2>Playbooks & cas d’usage</h2>
+                <p class="sub">Méthodes de travail, architecture d’analyse et modèles de production.</p>
+              </div>
             </div>
-            <div id="notesOverview" class="grid"></div>
+            <div id="playbook-grid" class="module-grid"></div>
           </section>
         </div>
       </main>
     </div>
 
-    <button class="back-to-top" id="backToTop">↑</button>
-    <div class="toast" id="toast"></div>
-
-    <div class="modal-overlay" id="helpModal">
-      <div class="modal">
-        <h3>Raccourcis</h3>
-        <ul class="help-list">
-          <li><span>Accueil</span> <kbd>g</kbd></li>
-          <li><span>Modules</span> <kbd>c</kbd></li>
-          <li><span>Excel</span> <kbd>x</kbd></li>
-          <li><span>Concepts</span> <kbd>b</kbd></li>
-          <li><span>Lexique</span> <kbd>l</kbd></li>
-          <li><span>Fiches</span> <kbd>f</kbd></li>
-          <li><span>Exercices</span> <kbd>e</kbd></li>
-          <li><span>Progression</span> <kbd>p</kbd></li>
-          <li><span>Aide</span> <kbd>?</kbd></li>
-        </ul>
-        <div class="modal-actions">
-          <button class="btn primary" id="closeHelpBtn">Fermer</button>
-        </div>
-      </div>
-    </div>
-
-    <input type="file" id="importFile" accept=".json" style="display:none" />
-
-    <script src="/app.js"></script>
+    <script src="app.js"></script>
   </body>
 </html>
