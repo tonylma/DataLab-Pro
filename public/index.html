@@ -1,0 +1,305 @@
+<!DOCTYPE html>
+<html lang="fr">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>DataLab Pro v5.0</title>
+    <link rel="stylesheet" href="/styles.css" />
+  </head>
+  <body>
+    <div class="app-shell">
+      <aside class="sidebar" id="sidebar">
+        <div class="brand">
+          <div class="logo">DΣ</div>
+          <div>
+            <strong>DataLab Pro v5.0</strong>
+            <small>Zero to Hero · LMD</small>
+          </div>
+        </div>
+
+        <div class="navlabel">Programme</div>
+        <button class="navitem active" data-nav="accueil">⌂ <span>Accueil</span></button>
+        <button class="navitem" data-nav="parcours">◈ <span>Parcours LMD</span></button>
+        <button class="navitem" data-nav="curriculum">▦ <span>21 modules</span></button>
+        <button class="navitem" data-nav="concepts">∑ <span>Bibliothèque concepts</span></button>
+        <button class="navitem" data-nav="lexique">A <span>Lexique A-Z</span></button>
+        <button class="navitem" data-nav="fiches">⚡ <span>Aide-mémoire</span></button>
+        <button class="navitem" data-nav="exercices">✎ <span>Exercices</span></button>
+        <button class="navitem" data-nav="cas">◆ <span>Cas pratiques</span></button>
+        <button class="navitem" data-nav="interview">☰ <span>Entretiens</span></button>
+        <button class="navitem" data-nav="atelier">⚗ <span>Laboratoire</span></button>
+        <button class="navitem" data-nav="evaluation">✓ <span>Évaluation</span></button>
+        <button class="navitem" data-nav="projet">◇ <span>Capstone</span></button>
+        <button class="navitem" data-nav="progression">◴ <span>Progression</span></button>
+
+        <div class="sidefoot">
+          <div>v5.0 · 100% hors ligne</div>
+          <div id="sessionTimer">Session : 0 min</div>
+          <div id="streakInfo">Streak : 0 jour</div>
+        </div>
+      </aside>
+
+      <main class="main">
+        <header class="topbar">
+          <button class="btn mobilemenu" id="mobileMenuBtn">☰</button>
+          <label class="search">
+            <span>⌕</span>
+            <input id="globalSearch" type="search" placeholder="Rechercher partout…" />
+          </label>
+          <button class="btn icon" id="themeBtn" title="Thème">🌓</button>
+          <button class="btn icon" id="helpBtn" title="Aide">?</button>
+          <span class="pill">v5.0</span>
+          <button class="btn" id="pdfBtn">PDF</button>
+        </header>
+
+        <div class="content">
+          <section class="section" id="accueil">
+            <div class="hero">
+              <span class="eyebrow">Zero to Hero · 21 modules · Édition enrichie v5.0</span>
+              <h1>De zéro à <span class="hl">analyste d'élite</span>. Sans aucune recherche externe.</h1>
+              <p>
+                21 modules, concepts clés, exemples de correction, cas pratiques, entretiens, laboratoires et capstone. Chaque notion est
+                définie, expliquée, illustrée et chiffrée.
+              </p>
+              <div class="pills">
+                <span>Maths fondamentales</span>
+                <span>Statistiques</span>
+                <span>SQL</span>
+                <span>Excel</span>
+                <span>Python pandas</span>
+                <span>Finance</span>
+                <span>Fraude & risque</span>
+                <span>Gouvernance</span>
+                <span>Storytelling</span>
+              </div>
+              <div class="actions">
+                <button class="btn primary" data-nav="parcours">Voir le parcours LMD</button>
+                <button class="btn ghost" data-nav="curriculum">Commencer</button>
+                <button class="btn ghost" data-nav="concepts">Bibliothèque</button>
+              </div>
+            </div>
+
+            <div class="kpis">
+              <div class="kpi">
+                <div class="lbl">Modules validés</div>
+                <div class="val"><span id="kpiModules">0</span>/21</div>
+                <div class="progress"><span id="kpiModulesBar"></span></div>
+              </div>
+              <div class="kpi">
+                <div class="lbl">Concepts consultés</div>
+                <div class="val"><span id="kpiConcepts">0</span>/70</div>
+                <div class="progress"><span id="kpiConceptsBar"></span></div>
+              </div>
+              <div class="kpi">
+                <div class="lbl">Exercices résolus</div>
+                <div class="val"><span id="kpiExercises">0</span>/35</div>
+                <div class="progress"><span id="kpiExercisesBar"></span></div>
+              </div>
+              <div class="kpi">
+                <div class="lbl">Projet capstone</div>
+                <div class="val"><span id="kpiProject">0</span>/12</div>
+                <div class="progress"><span id="kpiProjectBar"></span></div>
+              </div>
+            </div>
+          </section>
+
+          <section class="section hidden" id="parcours">
+            <h2>Parcours LMD — Licence + Master</h2>
+            <p class="sub">Structure Bologna. Licence = 3 ans. Master = 2 ans. Chaque semestre associe modules, exercices et livrables.</p>
+            <div id="parcoursContainer"></div>
+          </section>
+
+          <section class="section hidden" id="curriculum">
+            <h2>21 modules — cours complets</h2>
+            <div class="modulegrid" id="moduleGrid"></div>
+            <div id="lessonPanel"></div>
+          </section>
+
+          <section class="section hidden" id="concepts">
+            <h2>Bibliothèque de concepts</h2>
+            <p class="sub">70+ concepts clés expliqués en profondeur.</p>
+            <div class="chips" id="conceptChips"></div>
+            <div id="conceptList"></div>
+          </section>
+
+          <section class="section hidden" id="lexique">
+            <h2>Lexique A-Z</h2>
+            <p class="sub">Termes et définitions associés aux modules et aux pratiques analytiques.</p>
+            <div class="searchbox">
+              <input id="lexSearch" type="search" placeholder="Filtrer le lexique…" />
+            </div>
+            <table class="lex-table" id="lexTable">
+              <tbody></tbody>
+            </table>
+          </section>
+
+          <section class="section hidden" id="fiches">
+            <h2>Aide-mémoire rapide</h2>
+            <div class="tabs" id="ficheTabs">
+              <button class="tab" data-tab="sql" aria-selected="true">SQL</button>
+              <button class="tab" data-tab="excel" aria-selected="false">Excel</button>
+              <button class="tab" data-tab="equiv" aria-selected="false">Équivalences</button>
+              <button class="tab" data-tab="stats" aria-selected="false">Stats</button>
+              <button class="tab" data-tab="econ" aria-selected="false">Économie</button>
+              <button class="tab" data-tab="risk" aria-selected="false">Fraude</button>
+            </div>
+            <div class="chips" id="chips"></div>
+            <div id="out"></div>
+          </section>
+
+          <section class="section hidden" id="exercices">
+            <h2>Exercices progressifs</h2>
+            <p class="sub">35 exercices sur 4 niveaux.</p>
+            <div class="ex-level"><span class="badge">1</span><h3>Découverte</h3></div>
+            <div id="ex-level-1"></div>
+            <div class="ex-level"><span class="badge">2</span><h3>Consolidation</h3></div>
+            <div id="ex-level-2"></div>
+            <div class="ex-level"><span class="badge">3</span><h3>Maîtrise</h3></div>
+            <div id="ex-level-3"></div>
+            <div class="ex-level"><span class="badge">4</span><h3>Excellence</h3></div>
+            <div id="ex-level-4"></div>
+          </section>
+
+          <section class="section hidden" id="cas">
+            <h2>Cas pratiques</h2>
+            <div id="casesContainer"></div>
+          </section>
+
+          <section class="section hidden" id="interview">
+            <h2>Préparation entretien</h2>
+            <div id="interview-sql"></div>
+            <div id="interview-excel"></div>
+            <div id="interview-stats"></div>
+            <div id="interview-behavioral"></div>
+          </section>
+
+          <section class="section hidden" id="atelier">
+            <h2>Laboratoire interactif</h2>
+            <div class="lab">
+              <div class="row">
+                <input id="csvFile" type="file" accept=".csv,text/csv" />
+                <select id="delimiter">
+                  <option value="auto">Auto</option>
+                  <option value="," >Virgule</option>
+                  <option value=";">Point-virgule</option>
+                  <option value="\t">Tabulation</option>
+                </select>
+                <select id="encoding">
+                  <option value="utf-8">UTF-8</option>
+                  <option value="windows-1252">Windows-1252</option>
+                </select>
+              </div>
+              <div class="row">
+                <button class="btn primary" onclick="window.loadCsv()">Analyser</button>
+                <button class="btn" onclick="window.loadSample()">Exemple</button>
+                <button class="btn" onclick="window.clearData()">Effacer</button>
+              </div>
+              <div id="dataSummary" class="summary"></div>
+              <div class="csv-preview">
+                <table id="previewTable"></table>
+              </div>
+              <div class="row row-actions">
+                <button class="btn" onclick="window.exportCsv()">Export CSV</button>
+                <button class="btn" onclick="window.exportJson()">Export JSON</button>
+                <button class="btn" onclick="window.exportSql()">SQL INSERT</button>
+              </div>
+              <p id="exportStatus" class="muted"></p>
+            </div>
+
+            <div class="grid">
+              <div class="calc">
+                <h3>Risque</h3>
+                <div class="row"><label for="riskProb">Probabilité (%)</label><input id="riskProb" type="number" value="10" /></div>
+                <div class="row"><label for="riskImpact">Impact (FCFA)</label><input id="riskImpact" type="number" value="1000000" /></div>
+                <div class="row"><label for="riskControl">Contrôles (%)</label><input id="riskControl" type="number" value="40" /></div>
+                <button class="btn primary" onclick="window.calcRisk()">Calculer</button>
+                <div id="riskResult" class="result hidden"></div>
+              </div>
+
+              <div class="calc">
+                <h3>Finance</h3>
+                <div class="row"><label>Init</label><input id="finInit" type="number" value="100000" /></div>
+                <div class="row"><label>Final</label><input id="finFinal" type="number" value="112000" /></div>
+                <div class="row"><label>Inflation (%)</label><input id="finInflation" type="number" value="5" /></div>
+                <div class="row"><label>Flux annuel</label><input id="finCF" type="number" value="30000" /></div>
+                <div class="row"><label>Invest</label><input id="finInvest" type="number" value="100000" /></div>
+                <div class="row"><label>Actualisation (%)</label><input id="finDiscount" type="number" value="10" /></div>
+                <button class="btn primary" onclick="window.calcFinance()">Calculer</button>
+                <div id="finResult" class="result hidden"></div>
+              </div>
+            </div>
+          </section>
+
+          <section class="section hidden" id="evaluation">
+            <h2>Évaluation</h2>
+            <button class="btn" onclick="window.renderRandomQuiz()">🎲 Quiz aléatoire</button>
+            <form id="quizForm" class="quiz-form"></form>
+            <div class="quiz-actions">
+              <button class="btn primary" onclick="window.gradeQuiz()">Corriger</button>
+              <button class="btn" onclick="window.resetQuiz()">Recommencer</button>
+            </div>
+            <div id="quizResult" class="result hidden"></div>
+            <h3 class="flashcard-title">Flashcards</h3>
+            <div class="grid" id="flashcards"></div>
+          </section>
+
+          <section class="section hidden" id="projet">
+            <h2>Projet capstone</h2>
+            <div class="card">
+              <div class="cat">Cas</div>
+              <h3>Surveillance des transactions</h3>
+              <p class="desc">Données fictives, indicateurs, anomalies, risques et recommandations.</p>
+            </div>
+            <div class="grid" id="projectCards"></div>
+            <h3 class="subheading">Checklist</h3>
+            <div class="checklist" id="projectChecklist"></div>
+            <div class="inline-actions">
+              <button class="btn" onclick="window.exportChecklist()">Export checklist CSV</button>
+              <button class="btn primary" onclick="window.exportProgress()">Export progression JSON</button>
+              <button class="btn" onclick="window.importProgress()">Importer</button>
+            </div>
+          </section>
+
+          <section class="section hidden" id="progression">
+            <h2>Ma progression</h2>
+            <div class="checklist" id="skillChecklist"></div>
+            <div class="inline-actions">
+              <button class="btn" onclick="window.resetAllProgress()">Réinitialiser</button>
+              <button class="btn primary" onclick="window.exportProgress()">Exporter</button>
+              <button class="btn" onclick="window.importProgress()">Importer</button>
+            </div>
+            <h3 class="subheading">Notes personnelles</h3>
+            <div id="notesOverview" class="grid"></div>
+          </section>
+        </div>
+      </main>
+    </div>
+
+    <button class="back-to-top" id="backToTop">↑</button>
+    <div class="toast" id="toast"></div>
+
+    <div class="modal-overlay" id="helpModal">
+      <div class="modal">
+        <h3>Raccourcis</h3>
+        <ul class="help-list">
+          <li><span>Accueil</span><kbd>g</kbd></li>
+          <li><span>Curriculum</span><kbd>c</kbd></li>
+          <li><span>Concepts</span><kbd>b</kbd></li>
+          <li><span>Lexique</span><kbd>l</kbd></li>
+          <li><span>Fiches</span><kbd>f</kbd></li>
+          <li><span>Exercices</span><kbd>e</kbd></li>
+          <li><span>Atelier</span><kbd>a</kbd></li>
+          <li><span>Progression</span><kbd>p</kbd></li>
+          <li><span>Aide</span><kbd>?</kbd></li>
+        </ul>
+        <div class="modal-actions">
+          <button class="btn primary" id="closeHelpBtn">Fermer</button>
+        </div>
+      </div>
+    </div>
+
+    <input type="file" id="importFile" accept=".json" style="display:none" />
+
+    <script src="/app.js"></script>
+  </body>
+</html>

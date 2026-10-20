@@ -1,0 +1,353 @@
+{
+  "modules": [
+    {
+      "id": 0,
+      "lmd": "S1",
+      "level": "Fondations",
+      "title": "Fondamentaux mathématiques",
+      "time": "8–10 h",
+      "summary": "Nombres, fractions, pourcentages, sommes, puissances, logarithmes, logique.",
+      "goals": [
+        "Maîtriser fractions, pourcentages, taux de variation",
+        "Calculer une moyenne simple et pondérée",
+        "Lire et écrire la notation Σ",
+        "Comprendre puissance, logarithme et exponentielle"
+      ],
+      "skills": ["math1", "math2"]
+    },
+    {
+      "id": 1,
+      "lmd": "S1",
+      "level": "Fondations",
+      "title": "Statistiques descriptives",
+      "time": "10–12 h",
+      "summary": "Variables, distribution, moyennes, médiane, variance, dispersion numérique.",
+      "goals": [
+        "Définir population, échantillon et variable",
+        "Calculer moyenne, médiane, écart-type",
+        "Interpréter asymétrie et dispersion",
+        "Identifier les bons graphiques"
+      ],
+      "skills": ["stat1"]
+    },
+    {
+      "id": 2,
+      "lmd": "S1",
+      "level": "Fondations",
+      "title": "Pensée analytique et cycle de vie",
+      "time": "4–6 h",
+      "summary": "Cadrer la demande, définir l'unité d'analyse et tracer le cycle de vie des données.",
+      "goals": [
+        "Cadrer une question décisionnelle",
+        "Identifier la granularité",
+        "Documenter la qualité et le dictionnaire"
+      ],
+      "skills": ["an1", "an2"]
+    },
+    {
+      "id": 3,
+      "lmd": "S1",
+      "level": "Fondations",
+      "title": "Bases de données relationnelles",
+      "time": "6–8 h",
+      "summary": "Tables, clés, normalisation, contraintes d’intégrité et cardinalité.",
+      "goals": [
+        "Clés primaires et étrangères",
+        "1NF, 2NF, 3NF",
+        "Cardinalités et contraintes"
+      ],
+      "skills": ["sql1"]
+    },
+    {
+      "id": 4,
+      "lmd": "S2",
+      "level": "Analyse",
+      "title": "SQL — concepts fondamentaux",
+      "time": "8–10 h",
+      "summary": "SELECT, WHERE, JOIN, GROUP BY, ORDER BY, agrégation et logique d'exécution.",
+      "goals": [
+        "Définir chaque clause SQL",
+        "Comprendre l'ordre d'exécution",
+        "Écrire des jointures correctes"
+      ],
+      "skills": ["sql1", "sql2", "sql3"]
+    },
+    {
+      "id": 5,
+      "lmd": "S2",
+      "level": "Analyse",
+      "title": "SQL avancé : CTE et fonctions de fenêtre",
+      "time": "8–10 h",
+      "summary": "CTE récursives, ROW_NUMBER, RANK, LAG, LEAD et agrégats glissants.",
+      "goals": [
+        "Écrire des CTE lisibles",
+        "Maîtriser ROW_NUMBER, RANK, DENSE_RANK",
+        "Calculer des cumuls et changements temporels"
+      ],
+      "skills": ["sql4"]
+    },
+    {
+      "id": 6,
+      "lmd": "S2",
+      "level": "Analyse",
+      "title": "SQL — transactions, sécurité, imports",
+      "time": "6–8 h",
+      "summary": "CRUD, ACID, import, export, sauvegardes, sécurité et moindre privilège.",
+      "goals": [
+        "Maîtriser CRUD",
+        "Comprendre ACID",
+        "Importer/exporter sans casser les données"
+      ],
+      "skills": ["sql5"]
+    },
+    {
+      "id": 7,
+      "lmd": "S2",
+      "level": "Analyse",
+      "title": "Qualité et préparation des données",
+      "time": "6–8 h",
+      "summary": "Manquants, doublons, outliers, imputation et traçabilité.",
+      "goals": [
+        "Six dimensions de la qualité",
+        "Identifier MCAR/MAR/MNAR",
+        "Détecter outliers et doublons"
+      ],
+      "skills": ["an2", "ex4"]
+    },
+    {
+      "id": 8,
+      "lmd": "S3",
+      "level": "Modélisation",
+      "title": "Probabilités et inférence",
+      "time": "8–12 h",
+      "summary": "Probabilité conditionnelle, Bayes, intervalle de confiance, tests d’hypothèse.",
+      "goals": [
+        "Probabilité conditionnelle",
+        "Théorème de Bayes",
+        "IC, p-value, erreur de type I/II"
+      ],
+      "skills": ["stat2"]
+    },
+    {
+      "id": 9,
+      "lmd": "S3",
+      "level": "Modélisation",
+      "title": "Corrélation, régression, causalité",
+      "time": "8–12 h",
+      "summary": "Pearson, Spearman, régression linéaire simple, causalité et confondants.",
+      "goals": [
+        "Pearson vs Spearman",
+        "Régression simple",
+        "Confondants et DiD"
+      ],
+      "skills": ["stat3", "an5"]
+    },
+    {
+      "id": 10,
+      "lmd": "S3",
+      "level": "Applications",
+      "title": "Économie générale et indicateurs",
+      "time": "8–10 h",
+      "summary": "Micro, macro, croissance, inflation, PIB, chômage et indicateurs clés.",
+      "goals": [
+        "Comprendre PIB, inflation, chômage",
+        "Calculer un TCAC",
+        "Ajuster nominal vs réel"
+      ],
+      "skills": ["eco1", "eco2"]
+    },
+    {
+      "id": 11,
+      "lmd": "S4",
+      "level": "Applications",
+      "title": "Finance d'entreprise et décisions d'investissement",
+      "time": "8–10 h",
+      "summary": "Valeur temporelle, VAN, TRI, payback et rentabilité.",
+      "goals": [
+        "Valeur temporelle de l'argent",
+        "VAN, TRI",
+        "ROI et marge"
+      ],
+      "skills": ["eco2"]
+    },
+    {
+      "id": 12,
+      "lmd": "S4",
+      "level": "Pro",
+      "title": "Gouvernance d'entreprise et gouvernance des données",
+      "time": "6–8 h",
+      "summary": "Cadre de pilotage, rôles, comités et gouvernance algorithmique.",
+      "goals": [
+        "Définir la gouvernance d'entreprise",
+        "Comprendre les rôles Data Owner / Steward / DPO",
+        "Cadre algorithmique"
+      ],
+      "skills": ["gov1", "gov2"]
+    },
+    {
+      "id": 13,
+      "lmd": "S4",
+      "level": "Applications",
+      "title": "Détection de fraude",
+      "time": "10–12 h",
+      "summary": "Anomalies, alertes, précision, rappel, F1 et revue humaine.",
+      "goals": [
+        "Séparer anomalie et fraude",
+        "Mesurer précision et rappel",
+        "Gérer la base rate"
+      ],
+      "skills": ["ri1", "ri2"]
+    },
+    {
+      "id": 14,
+      "lmd": "S5",
+      "level": "Applications",
+      "title": "Risque et scoring",
+      "time": "8–10 h",
+      "summary": "Matrice risque / impact, PD, LGD, EAD et expected loss.",
+      "goals": [
+        "Matrice probabilité-impact",
+        "PD, LGD, EAD",
+        "Risque résiduel"
+      ],
+      "skills": ["ri1", "ri2"]
+    },
+    {
+      "id": 15,
+      "lmd": "S5",
+      "level": "Technique",
+      "title": "Python pour analystes",
+      "time": "10–12 h",
+      "summary": "Python de base, pandas, outils de nettoyage et analyse descriptive.",
+      "goals": [
+        "Installer Python",
+        "Types et structures",
+        "pandas et visualisation"
+      ],
+      "skills": ["py1"]
+    },
+    {
+      "id": 16,
+      "lmd": "S5",
+      "level": "Technique",
+      "title": "Visualisation et dashboards",
+      "time": "8–10 h",
+      "summary": "Choisir le bon graphique, lire les données visuellement et concevoir un dashboard métier.",
+      "goals": [
+        "Choisir le bon graphique",
+        "Éviter les pièges visuels",
+        "Créer un dashboard utile"
+      ],
+      "skills": ["an3"]
+    },
+    {
+      "id": 17,
+      "lmd": "S6",
+      "level": "Pro",
+      "title": "Communication et storytelling",
+      "time": "6–8 h",
+      "summary": "Pyramide Minto, BLUF, SCQA, résumé exécutif et présentation de données.",
+      "goals": [
+        "Minto et BLUF",
+        "SCQA",
+        "Dresser un résumé exécutif"
+      ],
+      "skills": ["an4"]
+    },
+    {
+      "id": 18,
+      "lmd": "S6",
+      "level": "Pro",
+      "title": "Éthique, RGPD, biais et explicabilité",
+      "time": "6–8 h",
+      "summary": "Règlementation, biais algorithmiques, équité, explicabilité et gouvernance.",
+      "goals": [
+        "Principes RGPD",
+        "Identifier les biais",
+        "Comprendre explicabilité"
+      ],
+      "skills": ["gov2", "an6"]
+    },
+    {
+      "id": 19,
+      "lmd": "S6",
+      "level": "Pro",
+      "title": "Portfolio et entretien",
+      "time": "6–8 h",
+      "summary": "Portfolio, README, GitHub, CV data et préparation entretien STAR.",
+      "goals": [
+        "Structurer un portfolio",
+        "Rédiger un README",
+        "Préparer des réponses STAR"
+      ],
+      "skills": ["an4", "an6"]
+    }
+  ],
+  "concepts": [
+    {"id": "sum", "cat": "Mathématiques", "lvl": "Fondamental", "title": "Somme (Σ)", "definition": "Opérateur qui additionne une suite de termes.", "example": "Σᵢ₌₁³ i² = 1 + 4 + 9 = 14.", "pitfall": "Attention aux bornes et à la variable muette."},
+    {"id": "log", "cat": "Mathématiques", "lvl": "Fondamental", "title": "Logarithme", "definition": "log_b(x) = exposant auquel il faut élever b pour obtenir x.", "example": "log₁₀(1000) = 3.", "pitfall": "log n'est défini que pour x > 0."},
+    {"id": "mean", "cat": "Statistiques", "lvl": "Fondamental", "title": "Moyenne", "definition": "Somme divisée par effectif.", "example": "[100, 110, 120, 130, 900] → moyenne = 272.", "pitfall": "Sensible aux valeurs extrêmes."},
+    {"id": "median", "cat": "Statistiques", "lvl": "Fondamental", "title": "Médiane", "definition": "Valeur centrale après tri.", "example": "[100, 110, 120, 130, 900] → 120.", "pitfall": "Sur n pair, prendre la moyenne des deux valeurs centrales."},
+    {"id": "variance", "cat": "Statistiques", "lvl": "Fondamental", "title": "Variance", "definition": "Moyenne des carrés des écarts à la moyenne.", "example": "Variance échantillon = Σ(xᵢ − x̄)² / (n−1).", "pitfall": "L'unité est au carré."},
+    {"id": "ci", "cat": "Inférence", "lvl": "Intermédiaire", "title": "Intervalle de confiance", "definition": "Fourchette de valeurs plausibles pour un paramètre.", "example": "Moyenne ± 1,96 × s/√n en grand échantillon.", "pitfall": "Ce n'est pas la probabilité que le paramètre soit dans cet intervalle observé."},
+    {"id": "pvalue", "cat": "Inférence", "lvl": "Intermédiaire", "title": "p-value", "definition": "Probabilité d'observer un résultat au moins aussi extrême sous H₀.", "example": "p = 0,03 signifie 3 % sous H₀.", "pitfall": "Va pas dire que H₀ a 3 % de chances d'être vraie."},
+    {"id": "correlation", "cat": "Causalité", "lvl": "Fondamental", "title": "Corrélation ≠ causalité", "definition": "Une association n'est pas automatiquement une cause.", "example": "Glaces et noyades augmentent en été.", "pitfall": "Il faut un facteur confondant ou un plan causal."},
+    {"id": "join", "cat": "SQL", "lvl": "Fondamental", "title": "JOIN", "definition": "Combine des tables selon une condition de correspondance.", "example": "INNER JOIN garde uniquement les correspondances.", "pitfall": "Une jointure sur clé non unique multiplie les lignes."},
+    {"id": "acid", "cat": "SQL", "lvl": "Fondamental", "title": "ACID", "definition": "Atomicité, cohérence, isolation, durabilité.", "example": "Un virement doit soit être validé, soit annulé.", "pitfall": "Sans transaction, on peut laisser un compte déséquilibré."},
+    {"id": "precision", "cat": "Fraude", "lvl": "Intermédiaire", "title": "Précision", "definition": "TP / (TP + FP)", "example": "Fiabilité des alertes positives.", "pitfall": "Quand la base rate est faible, la précision peut être faible malgré de bonnes performances globales."},
+    {"id": "recall", "cat": "Fraude", "lvl": "Intermédiaire", "title": "Rappel", "definition": "TP / (TP + FN)", "example": "Capacité à détecter les vrais cas positifs.", "pitfall": "Un rappel élevé a souvent plus de faux positifs."},
+    {"id": "van", "cat": "Économie", "lvl": "Intermédiaire", "title": "VAN", "definition": "Valeur actuelle nette = flux actualisés - investissement initial.", "example": "VAN > 0 : projet créateur de valeur.", "pitfall": "Le taux d'actualisation change beaucoup le résultat."},
+    {"id": "tri", "cat": "Économie", "lvl": "Intermédiaire", "title": "TRI", "definition": "Taux de rentabilité interne, taux r pour lequel VAN(r)=0.", "example": "TRI > coût du capital → projet rentable.", "pitfall": "Peut être multiple ou peu sûr si les flux sont non conventionnels."},
+    {"id": "rgpd", "cat": "Gouvernance", "lvl": "Intermédiaire", "title": "RGPD", "definition": "Cadre réglementaire pour la protection des données personnelles.", "example": "Minimisation, finalité, consentement, sécurité.", "pitfall": "Le traitement doit être justifié, limité et traçable."}
+  ],
+  "lexicon": [
+    ["ACID", "Atomicité, cohérence, isolation, durabilité — propriétés des transactions.", "M6"],
+    ["AUC-ROC", "Aire sous la courbe ROC. Mesure de discrimination d'un classifieur.", "Concepts"],
+    ["Base rate", "Prévalence du phénomène dans la population.", "M13"],
+    ["Bayes", "P(A|B)=P(B|A)P(A)/P(B)", "M8"],
+    ["CTE", "Common Table Expression. WITH ... AS (...)", "M5"],
+    ["Data drift", "Changement de distribution des données en production.", "M18"],
+    ["Data Owner", "Responsable métier d'un domaine de données.", "M12"],
+    ["Data Steward", "Garant opérationnel de la qualité et de la documentation.", "M12"],
+    ["DiD", "Différence-en-différences. Méthode causale quasi-expérimentale.", "M9"],
+    ["DPO", "Data Protection Officer", "M12"],
+    ["IQR", "Écart interquartile (Q3 - Q1)", "M1"],
+    ["JOIN", "Combinaison de deux tables selon une condition.", "M4"],
+    ["Médiane", "Valeur centrale après tri.", "M1"],
+    ["Moyenne", "Somme / effectif.", "M1"],
+    ["NULL", "Valeur absente ou inconnue.", "M4"],
+    ["PD", "Probability of Default.", "M14"],
+    ["Précision", "TP / (TP + FP)", "M13"],
+    ["p-value", "Probabilité d'observer un résultat aussi extrême sous H₀.", "M8"],
+    ["Rappel", "TP / (TP + FN)", "M13"],
+    ["RGPD", "Règlement général sur la protection des données.", "M18"],
+    ["RANK", "Fonction de fenêtre avec trous pour ex æquo.", "M5"],
+    ["ROW_NUMBER", "Fonction de fenêtre avec numérotation unique.", "M5"],
+    ["SELECT", "Clause qui liste les colonnes affichées.", "M4"],
+    ["SQL", "Structured Query Language.", "M4"],
+    ["TCAC", "Taux de croissance annuel composé.", "M10"],
+    ["TRI", "Taux de rentabilité interne.", "M11"],
+    ["VAN", "Valeur actuelle nette.", "M11"],
+    ["WHERE", "Clause de filtrage des lignes.", "M4"],
+    ["Z-score", "(x − μ) / σ.", "M7"]
+  ],
+  "faq": [
+    {"question": "WHERE vs HAVING ?", "answer": "WHERE filtre les lignes avant l'agrégation. HAVING filtre les groupes après GROUP BY."},
+    {"question": "Médiane vs moyenne ?", "answer": "La médiane est plus robuste aux valeurs extrêmes. La moyenne est plus sensible aux outliers."},
+    {"question": "Corrélation = causalité ?", "answer": "Non. Une corrélation peut refléter un facteur confondant, pas une relation de cause à effet."},
+    {"question": "Que signifie une VAN positive ?", "answer": "Le projet crée de la valeur au-delà du taux d'actualisation requis."}
+  ],
+  "updates": {
+    "lastSync": "2026-10-20T00:00:00.000Z",
+    "status": "ready",
+    "sources": [
+      "MDN Web Docs",
+      "PostgreSQL Docs",
+      "Microsoft Excel Support",
+      "NIST / AI RMF",
+      "OWASP",
+      "GDPR / CNIL",
+      "HBR / McKinsey analytical playbooks"
+    ]
+  }
+}

@@ -1,0 +1,78 @@
+{
+  "version": "v1.0.0",
+  "lastUpdated": "2026-10-20T00:00:00.000Z",
+  "guides": [
+    {
+      "id": "mdn-web",
+      "name": "MDN Web Docs",
+      "type": "web",
+      "description": "Standards Web, JavaScript, HTML, CSS and browser behavior.",
+      "priority": 95,
+      "sourceUrl": "https://developer.mozilla.org/"
+    },
+    {
+      "id": "postgresql-docs",
+      "name": "PostgreSQL Documentation",
+      "type": "database",
+      "description": "SQL semantics, window functions, indexes, query plans and transactions.",
+      "priority": 98,
+      "sourceUrl": "https://www.postgresql.org/docs/"
+    },
+    {
+      "id": "microsoft-excel",
+      "name": "Microsoft Excel Support",
+      "type": "spreadsheet",
+      "description": "Formulas, functions, Excel logic and business workflows.",
+      "priority": 91,
+      "sourceUrl": "https://support.microsoft.com/en-us/office"
+    },
+    {
+      "id": "nist-ai-rmf",
+      "name": "NIST AI Risk Management Framework",
+      "type": "governance",
+      "description": "AI governance, risk controls, monitoring and fairness considerations.",
+      "priority": 96,
+      "sourceUrl": "https://www.nist.gov/itl/ai-risk-management-framework"
+    },
+    {
+      "id": "owasp",
+      "name": "OWASP",
+      "type": "security",
+      "description": "Security principles, secure development and data handling patterns.",
+      "priority": 94,
+      "sourceUrl": "https://owasp.org/"
+    },
+    {
+      "id": "cnil-gdpr",
+      "name": "CNIL / GDPR",
+      "type": "privacy",
+      "description": "Privacy, consent, minimization, retention and lawful processing.",
+      "priority": 97,
+      "sourceUrl": "https://www.cnil.fr/"
+    },
+    {
+      "id": "hbr-mckinsey",
+      "name": "HBR / McKinsey analytical playbooks",
+      "type": "strategy",
+      "description": "Decision frameworks, management communication and executive thinking.",
+      "priority": 89,
+      "sourceUrl": "https://hbr.org/"
+    }
+  ],
+  "rail": {
+    "refreshPolicy": [
+      "Verify source status before accepting new material",
+      "Prefer official documentation and standards",
+      "Cross-check with at least 2 authoritative references before archival update",
+      "Reject unsupported claims or unverified vendor marketing language",
+      "Log updates with source, timestamp and rationale"
+    ],
+    "updateModes": [
+      "manual-refresh",
+      "source-matrix-sync",
+      "knowledge-merge",
+      "local-drift-scan",
+      "recommendation-log"
+    ]
+  }
+}
